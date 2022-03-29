@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from demoapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    
+    path('d1/',views.display1_view),
+    path('d2/',views.display2_view),
+    path('d3/',views.display3_view),
+    path('d4/',views.display4_view),
+    path('d5/',views.display5_view),
+    
 ]
+
+# Now include (link) all the urls at project level
