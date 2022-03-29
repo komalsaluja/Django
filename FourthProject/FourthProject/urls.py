@@ -17,11 +17,22 @@ from django.contrib import admin
 from django.urls import path
 
 # Explcit Import
-from demoapp.views import demo_show  
-from testapp.views import test_show       #AttributeError: module 'testapp.views' has no attribute 'demo_show'
+# from demoapp.views import demo_show  
+# from testapp.views import test_show   #AttributeError: module 'testapp.views' has no attribute 'demo_show'
+
+#Aliasing
+
+from demoapp import views as v1
+from testapp import views as v2
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('demo/', demo_show),
-    path('test/',test_show),
+    # path('demo/', demo_show),
+    # path('test/',test_show),
+    
+    path('demo/', v1.demo_show),
+    path('test/',v2.test_show),
+    
+    
 ]
