@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Explcit Import
+from demoapp.views import demo_show  
+from testapp.views import test_show       #AttributeError: module 'testapp.views' has no attribute 'demo_show'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('demo/', demo_show),
+    path('test/',test_show),
 ]
