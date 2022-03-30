@@ -19,5 +19,7 @@ from demoapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path(r'^$',views.template_view)
     path('demo/',views.template_view)
+   
 ]
