@@ -1,0 +1,17 @@
+{%load static%}
+<html>
+    <head>
+        <style>
+            h1{color:blue}
+            h2{color:red}
+            h3{color:green}
+        </style>
+        <link rel="stylesheet" href="{%static "css/design.css"%}"></link>
+    </head>
+    <body>
+        <h1>Welcome to Static Files Project 1</h1>
+        <h2>{{message}}</h2>
+        <h3>{{date}}</h3>
+        <img src="{%static "images/img1.jpeg"%}"></img>
+    </body>
+</html>
