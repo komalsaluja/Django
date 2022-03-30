@@ -1,0 +1,26 @@
+ h1 {
+     color: blue;
+     background-color: white;
+     text-align: center;
+ }
+ 
+ body {
+     background-color: aqua;
+ }
+ 
+ .tabs {
+     text-align: center;
+     margin-top: 50px;
+     margin-left: 300px;
+     display: flex;
+ }
+ 
+ .btn {
+     padding: 50px;
+     margin: 50px;
+ }
+ 
+ img {
+     width: 500px;
+     height: 500px;
+ }
