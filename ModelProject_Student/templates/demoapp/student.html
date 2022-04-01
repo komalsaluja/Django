@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Student Data</title>      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body bgcolor="pink">
+        <h1>Student Data</h1><hr>
+        <table border="1">
+            {%if student%}
+            <thead>
+                <th>Student Roll no.</th>
+                <th>Student Name</th>
+                <th>Student Marks</th>
+                <th>Student Address</th>
+            </thead>
+            {%for s in student%}
+            <tr>
+                <td>{{s.roll_no}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.marks}}</td>
+                <td>{{s.addr}}</td>
+            </tr>
+            {%endfor%}
+            {%else%}
+            <h1>No records Found</h1>
+            {%endif%}
+            
+        </table>
+    </body>
+</html>
