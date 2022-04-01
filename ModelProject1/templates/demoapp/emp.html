@@ -1,0 +1,25 @@
+<html>
+    <body bgcolor="pink">
+        <h1>Employee Information</h1><hr>
+        {%if emp%}
+        <table border="1">
+            <thead>
+                <th>Employee Number</th>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+                <th>Employee Address</th>
+            </thead>
+            {%for e in emp%}
+            <tr>
+                <td>{{e.eno}}</td>
+                <td>{{e.ename}}</td>
+                <td>{{e.esal}}</td>
+                <td>{{e.eaddr}}</td>
+            </tr>
+            {%endfor%}
+            {%else%}
+            <h2>No Employee Records found!!!</h2>
+            {%endif%}
+        </table>
+    </body>
+</html>
