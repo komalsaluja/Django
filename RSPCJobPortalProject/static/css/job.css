@@ -1,0 +1,21 @@
+h1 {
+    background-color: yellow;
+    color: blue;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: blue;
+}
+
+.container .jumbotron {
+    margin-top: 200px;
+    background-color: aqua;
+    padding: 50px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    align-content: center;
+}

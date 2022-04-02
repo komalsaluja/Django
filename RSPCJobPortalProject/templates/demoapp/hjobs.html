@@ -1,0 +1,43 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{%static "css/job.css"%}"/>
+    </head>
+    <body>
+        <a href="/demoapp/index" role="button" class="btn btn-primary" >Home Page</a>&nbsp;&nbsp;&nbsp; 
+        <h1>Hyderabad Jobs Information</h1><hr>
+        <img src="{%static "images/img9.jpg"%}"></img>
+        <img src="{%static "images/img10.jpg"%}"></img>
+        <img src="{%static "images/img11.jpg"%}"></img>
+        <img src="{%static "images/img12.jpg"%}"></img>
+
+        <table border="1">
+            {%if hjobs %}
+            <thead>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Eligibility</th>
+                <th>Address</th>
+                <th>Email ID</th>
+                <th>Mobile number</th>
+            </thead>
+            {%for i in hjobs%}
+            <tr>
+                <td>{{i.date}}</td>
+                <td>{{i.company}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.eligibility}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mobno}}</td>
+            </tr>
+            {%endfor%}
+            {%else%}
+            <h1>No Job records found in Hyderabad!!!</h1>
+            {%endif%}
+        </table>
+        
+    </body>
+</html>
