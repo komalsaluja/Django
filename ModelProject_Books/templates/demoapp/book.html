@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Book Data</title>      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+     <body bgcolor="pink">
+        <h1>BOOK DETAILS</h1><hr>
+        <table border="1">
+            {%if book%}
+            <thead>
+                <th>Book No.</th>
+                <th>Book Title</th>
+                <th>Book Author</th>
+            </thead>
+            {%for i in book%}
+            <tr>
+                <td>{{i.book_no}}</td>
+                <td>{{i.book_title}}</td>
+                <td>{{i.book_author}}</td>
+            </tr>
+            {%endfor%}
+            {%else%}
+            <h1>No records found</h1>
+            {%endif%}
+        </table>
+    </body>
+</html>
